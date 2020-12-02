@@ -48,13 +48,26 @@
 
 ### 3.1. 成果展示
 
-- 
+- 人员信息展示
+- 项目展示
+- 论文展示
+- 专利展示
+- 专著展示
+- 科研/教学获奖展示
+- 会议记录展示
 
 ### 3.2. 条目搜索
 
+- 人员搜索
+- 各个条目搜索
+- 多条件搜索
+
 ### 3.3. 数据管理
 
-
+- 数据查询
+- 数据导入
+- 数据删除
+- 数据更改
 
 ## 4. 功能需求
 
@@ -114,7 +127,7 @@
 
 STA 最终选择 MySQL 作 DBMS
 
-#### 5.1.2. E-R
+#### 5.1.2. E-R 图
 
 - 人员
 
@@ -134,11 +147,19 @@ STA 最终选择 MySQL 作 DBMS
 
 - 专著
 
+  ![Monograph](https://cdn.jsdelivr.net/gh/SmaIIstars/imgCDN/STA/ER-Monograph.png)
+
 - 科研&教学获奖
+
+  ![ScientificResearch&TeachingAward](https://cdn.jsdelivr.net/gh/SmaIIstars/imgCDN/STA/ER-ScientificResearch&TeachingAward.png)
 
 - 会议
 
+  ![Meeting](https://cdn.jsdelivr.net/gh/SmaIIstars/imgCDN/STA/ER-Meeting.png)
 
+- 实体与实体之间的关系 E-R 图
+
+  ![All](https://cdn.jsdelivr.net/gh/SmaIIstars/imgCDN/STA/ER-All.png)
 
 #### 5.1.3. 数据库表结构设计
 
