@@ -314,11 +314,16 @@ STA 最终选择 MySQL 作 DBMS
 
 ### 5.2. 后端
 
-Python + Flask
+- 整体环境: Python + Flask
+- 数据库: MySQL + Flask-SQLalchemy
+- 数据处理: Flask-RESTful
+- 端口部署: Flask
 
 ### 5.3. 前端
 
-React + AntD + Bizcharts
+- 前端环境: Nodejs
+- 前端框架: React
+- 样式框架: AntD + Bizcharts
 
 ## 6. 其他需求
 
