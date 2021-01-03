@@ -239,6 +239,7 @@ STA 最终选择 MySQL 作 DBMS
   | :-------: | :------: | :--: | :--: | :------------------: |
   | proId |          |      |      |      |
 	| proName | | | | |
+	| proYear | | | | |
   | proCategory | | | | |
   | proHeader | | | | |
   | proMember | | | | |
@@ -247,6 +248,8 @@ STA 最终选择 MySQL 作 DBMS
   | proUU | | | | Undertaking Unit |
   | proPF | | | | Project Fund |
   | proGU | | | | Grant Unit |
+  
+  
   
 - Paper
 
@@ -257,8 +260,10 @@ STA 最终选择 MySQL 作 DBMS
   |  paperFA  |          |      |      |                    First Author                     |
   |  paperCA  |          |      |      |                Corresponding Author                 |
   |  paperPT  |          |      |      |                   Published Time                    |
+  |  paperPN  |          |      |      |                  Publication Name                   |
   |  paperVP  |          |      |      |                Volume and Periodical                |
-  |  paperNP  |          |      |      |                   Number of pages                   |
+  |  paperSP  |          |      |      |                   Start of pages                    |
+  |  paperEP  |          |      |      |                    End of pages                     |
   |  paperCT  |          |      |      | Collection Types {SCI, EI, CC(Chinese Core), Other} |
 
 - Patent
@@ -268,8 +273,6 @@ STA 最终选择 MySQL 作 DBMS
   |    paId     |          |      |      |                                                              |
   |   paName    |          |      |      |                                                              |
   | paApplicant |          |      |      |                                                              |
-  |  paNumber   |          |      |      |                                                              |
-  |    paAN     |          |      |      |                      Application Number                      |
   |    paDA     |          |      |      |                    Date of Authorization                     |
   |   paType    |          |      |      | {International, Country, UM(Utility Model), Appearance, SC(Software CopyRight)} |
   |    paIE     |          |      |      |                            Is End                            |
@@ -280,13 +283,12 @@ STA 最终选择 MySQL 作 DBMS
 
   |  字段名  | 数据类型 | 长度 | 说明 |        描述         |
   | :------: | :------: | :--: | :--: | :-----------------: |
-  |   moId   |          |      |      |                     |
+  |  moISBN  |          |      |      |                     |
   |  moName  |          |      |      |                     |
   | moAuthor |          |      |      |                     |
   | moPress. |          |      |      |                     |
   |   moDP   |          |      |      | Date of publication |
-  |  moISBN  |          |      |      |                     |
-
+  
 - Scientific Research & Teaching Award
 
   |  字段名   | 数据类型 | 长度 | 说明 |    描述     |
