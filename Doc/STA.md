@@ -224,94 +224,103 @@ STA 最终选择 MySQL 作 DBMS
 
 #### 5.1.3. 数据库表结构设计
 
+- User
+
+  |   字段名   | 数据类型 | 长度 |     说明     |   描述   |
+  | :--------: | :------: | :--: | :----------: | :------: |
+  |    uId     | varchar  | 255  |     主键     |  用户ID  |
+  |   uName    | varchar  | 255  |              | 用户名称 |
+  | uPassword  | varchar  | 255  | Hash加密存储 | 用户密码 |
+  | uAuthority |   Int    |  20  |              | 用户权限 |
+  
 - Personnel
 
-  |  字段名   | 数据类型 | 长度 | 说明 |         描述         |
-  | :-------: | :------: | :--: | :--: | :------------------: |
-  |   perId   |          |      |      |                      |
-  |  perName  |          |      |      |                      |
-  | perDegree |          |      |      |                      |
-  |   perEB   |          |      |      | Education Background |
-  | perTitle  |          |      |      |                      |
+  |  字段名   | 数据类型 | 长度 | 说明 |  描述  |
+  | :-------: | :------: | :--: | :--: | :----: |
+  |   perId   | varchar  | 255  | 主键 | 人员ID |
+  |  perName  | varchar  | 255  |      |  名称  |
+  | perDegree | varchar  | 255  |      |  学位  |
+  |   perEB   | varchar  | 255  |      |  学历  |
+  | perTitle  | varchar  | 255  |      |  职称  |
 
 - Project
 
-  |   字段名    | 数据类型 | 长度 | 说明 |       描述       |
-  | :---------: | :------: | :--: | :--: | :--------------: |
-  |    proId    |          |      |      |                  |
-  |   proName   |          |      |      |                  |
-  |   proYear   |          |      |      |                  |
-  | proCategory |          |      |      |                  |
-  |  proHeader  |          |      |      |                  |
-  |  proMember  |          |      |      |                  |
-  |    proST    |          |      |      |                  |
-  |    proET    |          |      |      |                  |
-  |    proUU    |          |      |      | Undertaking Unit |
-  |    proPF    |          |      |      |   Project Fund   |
-  |    proGU    |          |      |      |    Grant Unit    |
+  |   字段名    | 数据类型 | 长度 | 说明 |    描述    |
+  | :---------: | :------: | :--: | :--: | :--------: |
+  |    proId    | varchar  | 255  | 主键 |   项目ID   |
+  |   proName   | varchar  | 255  |      |    名称    |
+  |   proYear   |   date   | 255  |      |  项目年度  |
+  | proCategory | varchar  | 255  |      |    类别    |
+  |  proHeader  | varchar  | 255  |      | 项目负责人 |
+  |  proMember  | varchar  | 255  |      |  项目成员  |
+  |    proST    |   date   | 255  |      |  开始时间  |
+  |    proET    |   date   | 255  |      |  结束时间  |
+  |    proUU    | varchar  | 255  |      |  承担单位  |
+  |    proPF    | varchar  | 255  |      |    资金    |
+  |    proGU    | varchar  | 255  |      |  拨款单位  |
 
 - Paper
 
-  |  字段名   | 数据类型 | 长度 | 说明 |                        描述                         |
-  | :-------: | :------: | :--: | :--: | :-------------------------------------------------: |
-  |  paperId  |          |      |      |                                                     |
-  | paperName |          |      |      |                                                     |
-  |  paperFA  |          |      |      |                    First Author                     |
-  |  paperCA  |          |      |      |                Corresponding Author                 |
-  |  paperPT  |          |      |      |                   Published Time                    |
-  |  paperPN  |          |      |      |                  Publication Name                   |
-  |  paperVP  |          |      |      |                Volume and Periodical                |
-  |  paperSP  |          |      |      |                   Start of pages                    |
-  |  paperEP  |          |      |      |                    End of pages                     |
-  |  paperCT  |          |      |      | Collection Types {SCI, EI, CC(Chinese Core), Other} |
+  |  字段名   | 数据类型 | 长度 | 说明 |     描述     |
+  | :-------: | :------: | :--: | :--: | :----------: |
+  |  paperId  | varchar  | 255  | 主键 |    论文ID    |
+  | paperName | varchar  | 255  |      |   论文名称   |
+  |  paperFA  | varchar  | 255  |      |   第一作者   |
+  |  paperCA  | varchar  | 255  |      |   通讯作者   |
+  |  paperPT  |   date   | 255  |      |   发表时间   |
+  |  paperPN  | varchar  | 255  |      | 发表刊物名称 |
+  |  paperVP  | varchar  | 255  |      | 卷号/期刊号  |
+  |  paperSP  |   Int    |  20  |      |   开始页数   |
+  |  paperEP  |   Int    |  20  |      |   结束页数   |
+  |  paperCT  | varchar  | 255  |      |     类型     |
 
 - Patent
 
-  |   字段名    | 数据类型 | 长度 | 说明 |                                      描述                                       |
-  | :---------: | :------: | :--: | :--: | :-----------------------------------------------------------------------------: |
-  |    paId     |          |      |      |                                                                                 |
-  |   paName    |          |      |      |                                                                                 |
-  | paApplicant |          |      |      |                                                                                 |
-  |    paDA     |          |      |      |                              Date of Authorization                              |
-  |   paType    |          |      |      | {International, Country, UM(Utility Model), Appearance, SC(Software CopyRight)} |
-  |    paIE     |          |      |      |                                     Is End                                      |
-  |   palApC    |          |      |      |                                Applicant Country                                |
-  |   palAuC    |          |      |      |                               Authorized Country                                |
+  |   字段名    | 数据类型 | 长度 | 说明 |    描述    |
+  | :---------: | :------: | :--: | :--: | :--------: |
+  |    paId     | varchar  | 255  | 主键 |   专利ID   |
+  |   paName    | varchar  | 255  |      |  专利名称  |
+  | paApplicant | varchar  | 255  |      |   申请人   |
+  |    paDA     |   date   | 255  |      |  授权日期  |
+  |   paType    | varchar  | 255  |      |    类型    |
+  |    paIE     |   Int    |  20  |      | 是否新申请 |
+  |    paApC    | varchar  | 255  |      |  申请国家  |
+  |    paAuC    | varchar  | 255  |      |  授权国家  |
 
 - Monograph
 
-  |  字段名  | 数据类型 | 长度 | 说明 |        描述         |
-  | :------: | :------: | :--: | :--: | :-----------------: |
-  |  moISBN  |          |      |      |                     |
-  |  moName  |          |      |      |                     |
-  | moAuthor |          |      |      |                     |
-  | moPress. |          |      |      |                     |
-  |   moDP   |          |      |      | Date of publication |
+  |  字段名  | 数据类型 | 长度 | 说明 |    描述    |
+  | :------: | :------: | :--: | :--: | :--------: |
+  |  moISSN  | varchar  | 255  | 主键 | 专著ISSN码 |
+  |  moName  | varchar  | 255  |      |  专著名称  |
+  | moAuthor | varchar  | 255  |      |   著作者   |
+  | moPress  | varchar  | 255  |      | 出版社名称 |
+  |   moDP   |   date   | 255  |      |  出版日期  |
 
 - Scientific Research & Teaching Award
 
-  |  字段名   | 数据类型 | 长度 | 说明 |    描述     |
-  | :-------: | :------: | :--: | :--: | :---------: |
-  |   staId   |          |      |      |             |
-  |  staName  |          |      |      |             |
-  |  staType  |          |      |      |   {SR, T}   |
-  | staWinner |          |      |      |             |
-  |   staRT   |          |      |      | reword Type |
-  |  staTime  |          |      |      |             |
-  |   staIT   |          |      |      | Is Teacher  |
-  |  staNote  |          |      |      |             |
+  |  字段名   | 数据类型 | 长度 | 说明 |      描述       |
+  | :-------: | :------: | :--: | :--: | :-------------: |
+  |   staId   | varchar  | 255  | 主键 | 科研/教学获奖ID |
+  |  staName  | varchar  | 255  |      |    获奖名称     |
+  |  staType  | varchar  | 255  |      |   科研或教学    |
+  | staWinner | varchar  | 255  |      |     获奖者      |
+  |   staRT   | varchar  | 255  |      |    奖励类别     |
+  |  staTime  |   date   | 255  |      |    获奖日期     |
+  |   staIT   | varchar  | 255  |      |   老师或学生    |
+  |  staNote  | varchar  | 255  |      |      备注       |
 
 - Meeting
 
-  |  字段名  | 数据类型 | 长度 | 说明 | 描述 |
-  | :------: | :------: | :--: | :--: | :--: |
-  |   mId    |          |      |      |      |
-  |  mName   |          |      |      |      |
-  | mMember  |          |      |      |      |
-  |  mTime   |          |      |      |      |
-  | mAddress |          |      |      |      |
-  |  mType   |          |      |      |      |
-  |  mNote   |          |      |      |      |
+  |  字段名  | 数据类型 | 长度 | 说明 |   描述   |
+  | :------: | :------: | :--: | :--: | :------: |
+  |   mId    | varchar  | 255  | 主键 |  会议ID  |
+  |  mName   | varchar  | 255  |      | 会议名称 |
+  | mMember  | varchar  | 255  |      |   成员   |
+  |  mTime   |   date   | 255  |      |   时间   |
+  | mAddress | varchar  | 255  |      |   地址   |
+  |  mType   | varchar  | 255  |      |   类型   |
+  |  mNote   | varchar  | 255  |      |   备注   |
 
 ### 5.2. 后端
 
