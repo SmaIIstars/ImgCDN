@@ -1,0 +1,28 @@
+{
+  "name": "github-cdn",
+  "version": "1.0.0",
+  "description": "smallstars's github cdn",
+  "main": "index.js",
+  "scripts": {
+    "commit": "git add . & git-cz"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-conventional-changelog"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SmaIIstars/imgCDN.git"
+  },
+  "author": "smallstars",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SmaIIstars/imgCDN/issues"
+  },
+  "homepage": "https://github.com/SmaIIstars/imgCDN#readme",
+  "dependencies": {
+    "commitizen": "^4.2.4",
+    "cz-conventional-changelog": "^3.3.0"
+  }
+}
