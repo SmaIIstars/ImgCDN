@@ -4,7 +4,8 @@
   "description": "smallstars's github cdn",
   "main": "index.js",
   "scripts": {
-    "commit": "git add . & git-cz"
+    "commit": "yarn cc && git add . && git-cz",
+    "cc": "node ./script/code-check.js"
   },
   "config": {
     "commitizen": {
